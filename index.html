@@ -18,6 +18,7 @@
 		<form class="form">
 			<input ng-model="text.quote" type="text" placeholder="quote"></input>
 			<input ng-model="text.author" type="text" placeholder="author"></input>
+			<input ng-model="text.rating" type="hidden" value="1"></input>
 			<input ng-click="submitQuote()" type="submit" value="Submit New Quote"></input>
 			<button ng-click="deleteQuote(quotes)">Undo Last Quote</button>
 		</form>
@@ -29,10 +30,10 @@
 		<a ng-click="authorClick()">- {{text.author}}</a><br>
 		<form>
 		<input ng-model="rating" ng-click="rated()" type="radio" value="1">1</input>
-		<input ng-model="rating" type="radio" name="rating" value="2">2</input>
-		<input ng-model="rating" type="radio" name="rating" value="3">3</input>
-		<input ng-model="rating" type="radio" name="rating" value="4">4</input>
-		<input ng-model="rating" type="radio" name="rating" value="5">5</input>
+		<input ng-model="rating" ng-click="rated()" type="radio" name="rating" value="2">2</input>
+		<input ng-model="rating" ng-click="rated()" type="radio" name="rating" value="3">3</input>
+		<input ng-model="rating" ng-click="rated()" type="radio" name="rating" value="4">4</input>
+		<input ng-model="rating" ng-click="rated()" type="radio" name="rating" value="5">5</input>
 		</form>
 	</div>
 

@@ -20,30 +20,37 @@ myApp.controller('myController', ['$scope', function($scope){
 		$scope.rating = {}
 	}
 
-	var addQuote = function(){
-		var id = $scope.author + '' + $scope.text
-	}
 
 	$scope.deleteQuote = function() {
 
 		$scope.quoteList.pop($scope.quoteList);
 		console.log($scope.quoteList);
 	}
-		$scope.rated = function(){
+
+	$scope.rated = function(){
+		$scope.quoteList.push($scope.rating);
+		console.log(rating);
+	}
+		// $scope.rated = function(){
 			
-			console.log(text);
-		}
-
-		// $scope.authorClick = function() {
-		// 	console.log($scope.quote.author);
+		// 	console.log(text);
 		// }
+		// $scope.myarray = [{author: dana, author: bob}];
 
+		// $scope.sortStuff = function(a, b){
+		// 	$scope.myarray.sort(function(a, b){
+		// 		var nameA=a.author, nameB=b.author;
+		// 		if (nameA < nameB){
+		// 			return -1
+		// 		} else if (nameA > nameB){
+		// 			return 1
+		// 		} else {
+		// 			return 0
+		// 		}
+		// 	}
+		// )}
+		// 	console.log(sortStuff());
 
-
-		var quoteSort = function(array){
-			array.sort();
-			console.log(array);
-		}
 
 
 
