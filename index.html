@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<title>Quote Project</title>
+
+	<link rel="stylesheet" type="text/css" href="main.css">
+
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.js"></script>
+
+	<script type="text/javascript" src="main.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore.js"></script
+
+</head>
+<body ng-controller="myController">
+	<div class="background">
+
+	<div class="formbox">
+		<form class="form">
+			<input ng-model="text.quote" type="text" placeholder="quote"></input>
+			<input ng-model="text.author" type="text" placeholder="author"></input>
+			<input ng-click="submitQuote()" type="submit" value="Submit New Quote"></input>
+			<button ng-click="deleteQuote(quotes)">Undo Last Quote</button>
+		</form>
+	</div>
+
+
+	<div ng-repeat="text in quoteList">
+		<p>{{text.quote}}</p>
+		<a ng-click="authorClick()">- {{text.author}}</a><br>
+		<form>
+		<input ng-model="rating" ng-click="rated()" type="radio" value="1">1</input>
+		<input ng-model="rating" type="radio" name="rating" value="2">2</input>
+		<input ng-model="rating" type="radio" name="rating" value="3">3</input>
+		<input ng-model="rating" type="radio" name="rating" value="4">4</input>
+		<input ng-model="rating" type="radio" name="rating" value="5">5</input>
+		</form>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</div>
+</body>
+</html>
